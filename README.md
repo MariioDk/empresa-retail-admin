@@ -6,17 +6,17 @@ Proyecto de configuración de seguridad y control de acceso para la base de dato
 
 La actividad implementa un modelo de seguridad basado en roles, con el propósito de separar las responsabilidades y controlar el acceso de los usuarios a la información de la base de datos.
 
-El sistema de permisos se organiza en tres roles principales: `ana`, `pedro` y `marta`, cada uno con diferentes niveles de acceso según sus responsabilidades.
+El sistema de permisos se organiza en tres roles principales: `ana`, `pedro` y `marta`, cada uno con diferentes niveles de acceso de acuerdo con sus responsabilidades.
 
 ## Objetivo
 
 Configurar usuarios, roles y permisos en MySQL para garantizar un acceso controlado a las tablas y procedimientos almacenados de la base de datos `empresa-retail-db`.
 
-La configuración permitirá aplicar los principios de separación de responsabilidades y mínimo privilegio, otorgando a cada usuario únicamente los permisos necesarios para desarrollar sus funciones.
+La configuración aplica los principios de separación de responsabilidades y mínimo privilegio, otorgando a cada usuario únicamente los permisos necesarios para desarrollar sus funciones.
 
 ## Roles y permisos
 
-### Ana - Cajas / CRM
+### Ana - CRM
 
 El rol `ana` permite gestionar:
 
@@ -32,7 +32,7 @@ Cuenta con permisos de:
 
 sobre las tablas correspondientes.
 
-### Pedro - Inventario / Marketing
+### Pedro - Marketing
 
 El rol `pedro` permite gestionar:
 
@@ -41,15 +41,15 @@ El rol `pedro` permite gestionar:
 
 Además, puede consultar la información de clientes, pero no puede modificarla.
 
-Cuenta con permisos de lectura y escritura sobre `canales` y `campañas`, y únicamente permisos de lectura sobre `clientes`.
+Cuenta con permisos de lectura, inserción, actualización y eliminación sobre las tablas `canal` y `campania`, y únicamente permisos de lectura sobre la tabla `cliente`.
 
-### Marta - Gerencia / Auditoría
+### Marta - Auditoría
 
 El rol `marta` permite:
 
 - Consultar conversiones.
 - Consultar información relacionada con compras, registros y suscripciones.
-- Ejecutar procedimientos almacenados destinados a consultas.
+- Ejecutar procedimientos almacenados destinados a la consulta de conversiones.
 
 No cuenta con permisos para modificar directamente la información de la base de datos.
 
