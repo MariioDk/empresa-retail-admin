@@ -1,3 +1,9 @@
+
+---
+
+# `.gitignore`
+
+```gitignore
 # ==========================================
 # ARCHIVOS SQL TEMPORALES Y RESPALDOS
 # ==========================================
@@ -17,11 +23,12 @@ backup_*.sql
 *.tmp.sql
 *.temp.sql
 
-# Archivos temporales de MySQL
+# Archivos temporales de configuración de MySQL
 *.cnf
 
 # Logs
 *.log
+
 
 # ==========================================
 # ARCHIVOS DEL SISTEMA
@@ -34,8 +41,9 @@ Desktop.ini
 # macOS
 .DS_Store
 
+
 # ==========================================
-# EDITORES
+# EDITORES Y ENTORNOS DE DESARROLLO
 # ==========================================
 
 .vscode/
